@@ -10,29 +10,36 @@
 
 
 /* upper part  */
-#wrapper #upper {
+#upper {
     display: flex;
     flex-flow: row wrap;
     align-content: center;
-    background-color: #3a5568;
+    background-color: #24292c;
     padding: 5px;
 }
 
-#wrapper #upper div {
+#upper div {
     display: flex;
     align-items: center;
+   
+}
+
+#upper .logo {
+    flex: 1 1 10%;
+    padding-left: 4%;
+    background-color: #ffff25;
+    background-image: linear-gradient(#ffff25, #ffffff);
+}
+
+#upper .logo p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: bold;  
+    font-size: 26px;
+    color: #2f3133;
 }
 
-#wrapper #upper .logo {
-    flex: 1 1 14%;
-}
 
-#wrapper #upper .logo img {
-    max-width: 100%;
-}
-
-#wrapper #upper .description {
+#upper .description {
     flex: 1 1 56%;
     font-family: sans-serif;
     font-size: 18px;
@@ -40,9 +47,8 @@
     color: #ffffff;
 }
 
-#wrapper #upper .tel {
+#upper .tel {
     flex: 1 1 26%;
-    color: #02185f;
     font-family: sans-serif;
     font-size: 18px;
     color: #ffffff;
@@ -50,9 +56,10 @@
 
 
 /* main part */
-#wrapper #main {
+#main {
     flex: 1 1 100%;
-    background-image: url(picts/fon-1.jpg);
+    /*background-image: url(picts/kredit-1.jpg); */
+    background-color: #e4e4e4;
 }
 
 #main-pict {
@@ -60,9 +67,10 @@
     flex-flow: row wrap;
 }
 #main .call {
-    flex-flow: row wrap;
     flex: 1 1 30%;
-    background-image: url(picts/kredit-1.jpg);
+    text-align: center;
+    padding: 50px 0;
+   
 }
 
 #main .call button {
@@ -87,25 +95,35 @@
 }
 
 #main .call .callta {
-   flex: 1 1 80%;
-    margin-top: 40px;
-    text-align: center;
-    padding-bottom: 10px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #a50233;
+    display: inline-block;
+    padding: 20px 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #050505;
     font-weight: bold;
-    font-size: 30px;
-    border-bottom: 2px solid #0a263d;
+    font-size: 24px;
+    
 }
 
 #main .call .callta2 {
     display: inline-block;
-    margin: 30px auto ;
+    padding: 20px 30px;
+    margin: 30px auto;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #232425;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #b8001f;
     font-weight: bold;
-    font-size: 26px;
+    font-size: 38px;
+    border-bottom: 2px solid #000000;
+}
+
+#main .call p {
+    display: inline-block;
+    padding: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 22px;
+    color: #050505;
+  
+
 }
 
 #main form {
@@ -114,7 +132,7 @@
    margin: 0 20%;
     padding: 50px;
     align-items: center;
-    background-color: #296979;
+    background-color: #00598d;
 }
 
 #main form label {
@@ -135,11 +153,13 @@
     flex: 1 1 100%;
     max-width: 100%;
     justify-content: center;   
+    background-color: rgb(16, 19, 24);
 }
 
 #action p {
     margin: 60px;
-    color: #02385c;
+    color: #ffffff;
+   
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 200%;
@@ -258,7 +278,7 @@ border: 1px solid #cccccc;
     line-height: 200%;
 }
 
-#wrapper .header {
+.header {
     text-align: center;
     background-color: black;
     color: #ffffff;
