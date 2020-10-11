@@ -1,57 +1,89 @@
+
+body {
+    background-image: url(picts/fon-1.jpg);
+}
+
 #wrapper {
     margin: 0 auto;
-    margin: 30px;
-    padding: 6px;  
+    padding: 6px; 
 }
 
 #wrapper .box {
     display: flex;
 }
 
+@media (max-width: 420px) {
+    #wrapper {
+        margin: 0;
+        padding: 0;
+    }
+}
 
 /* upper part  */
 #upper {
     display: flex;
     flex-flow: row wrap;
-    align-content: center;
-    background-color: #24292c;
     padding: 5px;
+    border-bottom: 3px solid #0c343b;
+    background-color: #ffffff;
+    background-image: linear-gradient(to left,#056070, #fff);
 }
 
 #upper div {
     display: flex;
-    align-items: center;
-   
 }
 
 #upper .logo {
     flex: 1 1 10%;
-    padding-left: 4%;
-    background-color: #ffff25;
-    background-image: linear-gradient(#ffff25, #ffffff);
+    max-width: 8%;
 }
 
-#upper .logo p {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: bold;  
-    font-size: 26px;
-    color: #2f3133;
+#upper .logo img {
+    max-width: 100%;
 }
-
 
 #upper .description {
     flex: 1 1 56%;
-    font-family: sans-serif;
-    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    align-items: flex-end;
+    font-size: 26px;
     padding-left: 40px;
-    color: #ffffff;
+    color: #000000;
 }
 
 #upper .tel {
     flex: 1 1 26%;
-    font-family: sans-serif;
-    font-size: 18px;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 22px;
     color: #ffffff;
+}
+
+@media (max-width: 420px) {
+   #upper {
+        border-bottom: 1px solid #0c343b;
+        background-image: linear-gradient(to left,#056070, #5fb0b6);
+
+    }
+
+    #upper .logo {
+       max-width: 20%;
+    }
+    
+    #upper .logo img {
+        max-width: 100%;
+    }
+    
+    #upper .description {
+      display: none;
+    }
+
+    #upper .tel {
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 12px;
+    }
 }
 
 
@@ -59,7 +91,8 @@
 #main {
     flex: 1 1 100%;
     /*background-image: url(picts/kredit-1.jpg); */
-    background-color: #e4e4e4;
+    background-color: #fffae0;
+    background-image: url(picts/fons/fon-16.jpg);
 }
 
 #main-pict {
@@ -70,7 +103,6 @@
     flex: 1 1 30%;
     text-align: center;
     padding: 50px 0;
-   
 }
 
 #main .call button {
@@ -96,49 +128,50 @@
 
 #main .call .callta {
     display: inline-block;
-    padding: 20px 30px;
+    margin: 30px auto;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: #050505;
+    color: #000000;
+    text-shadow: 1px 1px #ffffff;
     font-weight: bold;
-    font-size: 24px;
-    
+    font-size: 30px;  
 }
 
 #main .call .callta2 {
     display: inline-block;
     padding: 20px 30px;
-    margin: 30px auto;
+    margin: 40px auto;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: #b8001f;
+    color: #000000;
+    text-shadow: 1px 1px #ffffff;
     font-weight: bold;
-    font-size: 38px;
+    font-size: 40px;
     border-bottom: 2px solid #000000;
 }
 
 #main .call p {
     display: inline-block;
-    padding: 40px;
+    background-color: #515f61;
+    opacity: 0.8;
+    padding: 20px 30px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 22px;
-    color: #050505;
-  
-
+    font-size: 20px;
+    color: #ffffff;
 }
 
 #main form {
     display: flex;
     flex-flow: column wrap;
-   margin: 0 20%;
+    margin: 0 20%;
     padding: 50px;
     align-items: center;
-    background-color: #00598d;
+    background-image: linear-gradient(#044450, #028ea7);
 }
 
 #main form label {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
-    color: #f3f1f1;
+    color: #ffffff;
 }
 
 #main form input {
@@ -147,30 +180,92 @@
     height: 26px;
 }
 
+@media (max-width: 420px) {
+    #main {display: flex;
+        flex-flow: column-reverse;
+        background-image: url(picts/fon-1.jpg);
+    }
+
+    #main .call {
+        padding: 2px 0;
+    }
+
+    #main .call button {
+        border-radius: 6px;
+        font-size: 12px;
+        margin-top: 6px;
+        padding: 6px;
+        max-width: 70%;
+    }
+
+    #main .call .callta {
+        margin: 4px auto;
+        font-size: 16px;  
+    }
+    
+    #main .call .callta2 {
+        padding: 6px;
+        margin: 12px auto;
+        font-size: 18px;
+        border-bottom: 2px solid #000000;
+    }
+    
+    #main .call p {
+        display: none;
+    }
+
+    #main form {
+        flex-flow: column wrap;
+        margin: 12px 20px;
+        padding: 12px 8px;
+    }
+    
+    #main form label {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 14px;
+        color: #ffffff;
+    }
+    
+    #main form input {
+        margin:4px 0 20px 0;
+        width: 90%;
+        height: 16px;
+    }
+}
 
 /* action part  */
 #action {
     flex: 1 1 100%;
     max-width: 100%;
     justify-content: center;   
-    background-color: rgb(16, 19, 24);
+    background-color: #225963;
 }
 
 #action p {
-    margin: 60px;
+    margin: 40px;
     color: #ffffff;
-   
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 200%;
     font-size: 28px;
 }
 
+@media (max-width: 420px) {
+    #action {
+      margin-bottom: 8px;
+    }
+
+    #action p {
+        margin: 4px;
+        padding: 8px;
+        line-height: 140%;
+        font-size: 14px;
+    }
+}
 
 /* trigger part  */
 #trigger {
     flex-flow: row wrap;
-    background-color: #5b85a1;
 }
 
 #trigger .trigger-box {  
@@ -178,93 +273,165 @@
     align-items: center;
     text-align: center;
     background-color: #ffffff;
-    border: 1px solid #e4e4e4;
+    border: 1px solid #ee3636;
 }
 
 #trigger .trigger-box div {
     font-family: Verdana, Geneva, Tahoma, sans-serif; 
     font-size: 16px;
     font-weight: bold;
+    color: #0c343b;
 }
 
 #trigger .trigger-box img {
-    max-width: 80%;
+    max-width: 60%;
+    max-height: 40%;
     align-items: center;
     margin-bottom: 30px;
+    border: 1px solid #008000;
 }
 
+@media (max-width: 420px) {
+    #trigger {
+        flex-flow: row wrap;
+    }
+    
+    #trigger .trigger-box div {
+        max-height: 50%;
+        font-size: 12px;
+        padding: 4px;
+        margin-bottom: 6px;
+        border: 1px solid #cccccc;
+    }
+    
+    #trigger .trigger-box img {
+        max-width: 60%;
+        max-height: 50px;
+        align-items: center;
+        margin: 8px;
+    }
+    
+}
 
 /* Contact form */
 
 #forma form {
-    display: flex;
-    flex-flow: column wrap;
-    flex: 1 1 80%;
-    padding: 80px;
-    align-items: center; 
-    background-color: #3a5568;    
+    margin: 20px auto;
+    max-width: 320px;
+    padding: 40px;
+    text-align: center;
+    background-color: #3e778d;
+    border: 1px solid #696969;
+    border-radius: 6px;
 }
 
 #forma form label {
+    display: inline-block;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
-    color: #eeeeee;
+    color: #ffffff;
 }
 
 #forma form input {
+    display: inline-block;
     margin:4px 0 20px 0;
-    width: 60%;
+    width: 80%;
     height: 26px;
+    background-color: #ebebeb;
 }
 
 #forma button {
     background-color: #dc143c;
-    background-image: linear-gradient(#dc143c, #a7012b);
+    background-image: linear-gradient( #dc143c, #880017);
     border-radius: 6px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 22px;
+    font-size: 18px;
     margin-top: 30px;
-    padding: 20px;
+    padding: 16px;
     color: #ffffff;
     max-width: 70%;
 }
 
 #forma button:hover { 
-    background-color: #a56548;
+    background-color: #009189;
     background-image: linear-gradient(#64443e, #ebaf9c);
 }
 
+@media (max-width: 420px) {
+    #forma form {
+        margin: 8px auto;
+        padding: 12px 6px;
+        border: 1px solid #696969;
+        border-radius: 10px;
+    }
+    
+    #forma form label {
+        font-size: 14px;
+    }
+    
+    #forma form input {
+        margin: 4px 0 20px 0;
+        width: 90%;
+        height: 18px;
+    }
+    
+    #forma button {
+        border-radius: 6px;
+        font-size: 13px;
+        margin-top: 4px;
+        padding: 6px 12px;
+        max-width: 70%;
+    }
+    
+}
+
+
 /* How it works */
 #howitworks {
-   flex-flow: row wrap;
-   
-   background-image: url(picts/fon-3.jpg);
+   flex-flow: row wrap; 
 }
 /* background-image: url(picts/fon-1.jpg); */
 
 #howitworks .howworks-box {
     flex: 1 1 17%;
-    background-color: #ffffff;
     margin: 16px;
-    background-color: #2b3e42;
-border: 1px solid #cccccc;
+    border: 1px solid #050505;
+    background-color: #065a69;
+    background-image: linear-gradient(#028ea7, #044450); 
 }
 
 #howitworks .howworks-box p {
     flex: 1 1 100%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     text-align: center;
-    color: #ffffff;
-   
+    color: #ffffff; 
 }
+
+@media (max-width: 420px) {
+    #howitworks {
+        flex-flow: row wrap; 
+     }
+     /* background-image: url(picts/fon-1.jpg); */
+     
+     #howitworks .howworks-box {
+         flex: 1 1 25%;
+         margin: 4px;
+     }
+     
+     #howitworks .howworks-box p {
+         flex: 1 1 100%;
+         font-size: 12px;
+     }
+}
+
 
 /* Footer */
 
 #footer {
     padding: 40px;
-    background-color: #296979;
-    color: rgb(235, 235, 235);
+    background-color: #191c1d;
+    color: #ffffff;
     flex-flow: row wrap;
 }
 
@@ -278,11 +445,32 @@ border: 1px solid #cccccc;
     line-height: 200%;
 }
 
+@media (max-width: 420px) {
+    #footer {
+        padding: 8px;
+        flex-flow: row wrap;
+    }
+    
+    #footer .footer-box {
+        flex: 1 1 30%;
+        padding: 4px;
+        border: 1px solid #f2fffe;
+    }
+    
+    #footer .footer-box p {
+        font-size: 12px;
+        line-height: 120%;
+    }
+    
+}
+
+
+
 .header {
     text-align: center;
-    background-color: black;
+    padding: 20px;
+    background-image: linear-gradient(#044450, #028ea7);
     color: #ffffff;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 22px;
 }
-
